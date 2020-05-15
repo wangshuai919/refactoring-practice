@@ -11,13 +11,11 @@ public class Owing {
         this.name = name;
     }
 
-    void printBill() {
+    void printOwing() {
         double amount = 0.0;
         Enumeration e = orders.elements();
 
         printBanner();
-
-        System.out.println("***********Order**************");
 
         //calculate amount
         while (e.hasMoreElements()) {
