@@ -1,4 +1,4 @@
-package practice.p01;
+package practice01;
 
 public class Order {
     double amount;
