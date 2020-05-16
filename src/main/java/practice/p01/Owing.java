@@ -11,7 +11,7 @@ public class Owing {
         this.name = name;
     }
 
-    void printOwing() {
+    public void printOwing() {
         double amount = 0.0;
         Enumeration e = orders.elements();
 
