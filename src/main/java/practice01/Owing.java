@@ -26,7 +26,7 @@ public class Owing {
 
         //print detail
         System.out.println("name:" + name);
-        System.out.println("total:" + amount);
+        System.out.println("total:" + amount * (1 + 0.1)); //add tax
     }
 
     private void printBanner() {
