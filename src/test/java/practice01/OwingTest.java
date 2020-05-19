@@ -21,7 +21,7 @@ public class OwingTest {
 
         Owing owing = new Owing(orders, "Mr.Zhang");
         assertThat(owing.printOwing(),
-                containsString("total"));
+                containsString("total:" + String.format("%.2f", 55 * (1 + 0.1))));
     }
 
 }

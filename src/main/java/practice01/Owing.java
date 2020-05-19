@@ -29,7 +29,7 @@ public class Owing {
 
         //print detail
         result.append("name:" + name);
-        result.append("total:" + amount * (1 + 0.1));
+        result.append("total:" + String.format("%.2f", amount * (1 + 0.1)));
         result.append("date:" + new Date());
 
         return result.toString();
