@@ -1,5 +1,6 @@
 package practice01;
 
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -12,11 +13,13 @@ public class Owing {
         this.name = name;
     }
 
-    public void printOwing() {
+    public String printOwing() {
+        StringBuilder result = new StringBuilder();
         double amount = 0.0;
         Enumeration e = orders.elements();
 
-        printBanner();
+        String banner = printBanner();
+        result.append(banner);
 
         //calculate amount
         while (e.hasMoreElements()) {
@@ -25,13 +28,18 @@ public class Owing {
         }
 
         //print detail
-        System.out.println("name:" + name);
-        System.out.println("total:" + amount * (1 + 0.1)); //add tax
+        result.append("name:" + name);
+        result.append("total:" + amount * (1 + 0.1));
+        result.append("date:" + new Date());
+
+        return result.toString();
     }
 
-    private void printBanner() {
-        System.out.println("**************************");
-        System.out.println("***** Customer Owes ******");
-        System.out.println("**************************");
+    private String  printBanner() {
+        StringBuilder banner = new StringBuilder();
+        banner.append("**************************");
+        banner.append("***** Customer Owes ******");
+        banner.append("**************************");
+        return banner.toString();
     }
 }
