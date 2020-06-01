@@ -5,7 +5,7 @@ import java.util.List;
 
 public class NumberPrinter {
 
-    public String convert(int num) {
+    private String convert(int num) {
         if (num % 5 == 0 && num % 3 == 0) {
             return "FizzBuzz";
         }
@@ -20,7 +20,7 @@ public class NumberPrinter {
 
     public List convertNumber() {
         List<String> result = new ArrayList<String>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 1; i <= 100; i++) {
             System.out.println(convert(i));
             result.add(convert(i));
         }
