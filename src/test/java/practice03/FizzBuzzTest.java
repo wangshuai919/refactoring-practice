@@ -32,4 +32,11 @@ public class FizzBuzzTest {
         assertTrue("FizzBuzz".equals(printer.convertNumber().get(29)));
         assertTrue("FizzBuzz".equals(printer.convertNumber().get(44)));
     }
+
+    @Test
+    public void should_return_fizz_buzz_whizz_when_multiples_of_three_and_five() {
+        assertTrue("Whizz".equals(printer.convertNumber().get(6)));
+        assertTrue("FizzWhizz".equals(printer.convertNumber().get(20)));
+        assertTrue("BuzzWhizz".equals(printer.convertNumber().get(34)));
+    }
 }
