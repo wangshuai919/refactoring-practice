@@ -15,5 +15,5 @@
 #### 取车
 - Given 一个有效的停车Token，When 取车，Then 取到存放的车 
 - Given 停车场是满的，一个有效的Token，When 取车，Then 可以进行泊车
-- Given 停车场是满的，从停车场取一辆车，When 取相同的车，Then '取车失败'
-- Given 一个停车场，When 取一个未停放的车，Then '取车失败'
+- Given 停车场是满的，一个使用过的Token，When 取车，Then '车辆不存在'
+- Given 一个停车场，一个无效的Token，When 取车，Then '车辆不存在'
