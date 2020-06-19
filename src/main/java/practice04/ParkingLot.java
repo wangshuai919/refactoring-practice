@@ -18,7 +18,7 @@ public class ParkingLot {
         return token;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return tokenCarMap.size() == capacity;
     }
 
@@ -27,5 +27,9 @@ public class ParkingLot {
         if(car == null) throw new CarNotException();
         tokenCarMap.remove(token);
         return car;
+    }
+
+    public int getSpaces() {
+        return capacity - tokenCarMap.size();
     }
 }

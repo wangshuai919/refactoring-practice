@@ -14,7 +14,7 @@ public class ParkingLotTest {
     }
 
     @Test(expected = FullException.class)
-    public void should_return_exception_when_park_given_parklingLot_is_full() {
+    public void should_return_exception_when_park_given_parkingLot_is_full() {
         ParkingLot parkingLot = new ParkingLot(1);
         Car car = new Car("1111-1110-01");
         parkingLot.park(car);
